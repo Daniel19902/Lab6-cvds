@@ -1,4 +1,4 @@
-package servlet.model;
+package SampleServlet.model;
 
 public class Todo {
 

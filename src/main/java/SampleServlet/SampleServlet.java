@@ -1,4 +1,4 @@
-package servlet;
+package SampleServlet;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,6 +10,8 @@ import java.util.Optional;
 
 @WebServlet(urlPatterns = "/helloServlet")
 public class SampleServlet extends HttpServlet {
+
+    static final long serialVersionUID = 35L;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -26,6 +28,7 @@ public class SampleServlet extends HttpServlet {
                         "<button onclick=\"window.location.href='/';\">Go back</button>" +
                         "</div>";
         responseWriter.write(HTML);
+        resp.setContentType("text/html");
         responseWriter.flush();
     }
 }

@@ -1,6 +1,6 @@
-package servlet;
+package SampleServlet;
 
-import servlet.model.Todo;
+import SampleServlet.model.Todo;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,9 +16,12 @@ import java.util.Optional;
 @WebServlet(urlPatterns = "/todo")
 public class ServiceServlet extends HttpServlet {
 
+    static final long serialVersionUID = 34L;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Writer responseWriter = resp.getWriter();
+        resp.setContentType("text/html");
         try {
             int id = Integer.parseInt(req.getParameter("id"));
             Optional<Todo> optionalTodo = Optional.ofNullable(Service.getTodo(id));
@@ -68,6 +71,7 @@ public class ServiceServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Writer responseWriter = resp.getWriter();
+        resp.setContentType("text/html");
         try {
             int id = Integer.parseInt(req.getParameter("id"));
             Optional<Todo> optionalTodo = Optional.ofNullable(Service.getTodo(id));

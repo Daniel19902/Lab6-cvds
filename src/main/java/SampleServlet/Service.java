@@ -1,7 +1,7 @@
-package servlet;
+package SampleServlet;
 
+import SampleServlet.model.Todo;
 import com.google.gson.Gson;
-import servlet.model.Todo;
 
 import java.io.BufferedReader;
 import java.io.IOException;

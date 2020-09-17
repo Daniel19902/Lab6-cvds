@@ -1,7 +1,7 @@
 package WebAppJSF.calculator;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
+import javax.faces.bean.SessionScoped;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,14 +10,10 @@ import java.util.Map;
 
 @SuppressWarnings("deprecation") // @ManagedBean JavaServerFaces
 @ManagedBean(name = "calculatorBean", eager = true) // javax:javaee-api:8.0.1
-@ViewScoped
+@SessionScoped
 public class CalculatorBean implements Serializable {
 
-    private static final long serialVersionUID;
-
-    static {
-        serialVersionUID = 1L;
-    }
+    static final long serialVersionUID = 33L;
 
     private String inputField;
     private double mean;
@@ -100,6 +96,10 @@ public class CalculatorBean implements Serializable {
 
     public void restart() {
         setInputField("");
+        setMean(0);
+        setStandardDeviation(0);
+        setVariance(0);
+        setModes("");
         this.record.clear();
     }
 
