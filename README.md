@@ -1,4 +1,4 @@
-# :hammer: Laboratorio 5 - MVC PrimeFaces Introduction
+# 🛠️ Laboratorio 5 - MVC PrimeFaces Introduction
 ### Introducción a proyectos web
 
 ## I. Jugando a ser un cliente HTTP
@@ -139,7 +139,7 @@ lugar de POST, use el método GET . Qué diferencia observa?
   parámetros de la cadena de consulta. En cuanto al uso de POST, los formularios aparecen incluidos dentro del cuerpo del 
   mensaje de la petición HTTP.
     
-  ##### Tabla comparativa:
+  #### Tabla comparativa:
     
   |  | GET | POST |
   | :---: | :---: | :---: |
@@ -214,3 +214,4 @@ Esta parte del laboratorio se encuentra desarrollada en [WebAppJSF](/WebAppJSF).
 * WebAppJSF:
 
 ![](img/WebAppJSF.png)
+
