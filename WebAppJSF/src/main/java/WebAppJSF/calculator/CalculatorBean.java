@@ -2,6 +2,7 @@ package WebAppJSF.calculator;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -9,10 +10,14 @@ import java.util.Map;
 
 @SuppressWarnings("deprecation") // @ManagedBean JavaServerFaces
 @ManagedBean(name = "calculatorBean", eager = true) // javax:javaee-api:8.0.1
-// @ApplicationScoped
-// @SessionScoped
 @ViewScoped
-public class CalculatorBean {
+public class CalculatorBean implements Serializable {
+
+    private static final long serialVersionUID;
+
+    static {
+        serialVersionUID = 1L;
+    }
 
     private String inputField;
     private double mean;
@@ -103,7 +108,6 @@ public class CalculatorBean {
             setDoubleList(stringToDoubleList(getInputField()));
             if (!this.record.contains(getDoubleList().toString())) {
                 this.record.add(getDoubleList().toString());
-                System.out.println(this.record);
             }
             return true;
         } catch (Exception e) {
