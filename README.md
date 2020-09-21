@@ -46,10 +46,10 @@
        Corresponden a errores de cliente, el más conocido es el **error 404** que aparece cuándo la página que se 
        intentó buscar no existe.
        
-     * Código de estado 500
+     * Código de estado 500 (500 ... 511)
        
        Son errores por parte del servidor. Es posible que el servidor tenga algún problema temporal y no hay mucho que 
-       se pueda hacer, 500 ... 511 .
+       se pueda hacer.
 
 4. Realice una nueva conexión con telnet, esta vez a:
    * Host: www.httpbin.org
