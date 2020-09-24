@@ -1,6 +1,7 @@
 # :hammer_and_wrench: Laboratorio 5 - MVC PrimeFaces Introduction
 
 [![CircleCI](https://circleci.com/gh/Daniel19902/Lab6-cvds.svg?style=svg)](https://app.circleci.com/pipelines/github/Daniel19902/Lab6-cvds)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/56c0f7f5d79a41f6a1345ca00a2d8bed)](https://www.codacy.com/manual/Daniel19902/Lab6-cvds/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Daniel19902/Lab6-cvds&amp;utm_campaign=Badge_Grade)
 
 ## I. Jugando a ser un cliente HTTP
 
