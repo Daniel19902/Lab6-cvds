@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:22:57:00 -0500] "GET / HTTP/1.1" 200 5093 http-bio-8080-exec-1 2016
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:22:57:01 -0500] "GET /javax.faces.resource/core.js.xhtml;jsessionid=F38EAEA4A7FD681F817149F8B88C6BED?ln=primefaces&v=6.0 HTTP/1.1" 200 30554 http-bio-8080-exec-5 105
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:22:57:01 -0500] "GET /javax.faces.resource/jquery/jquery.js.xhtml;jsessionid=F38EAEA4A7FD681F817149F8B88C6BED?ln=primefaces&v=6.0 HTTP/1.1" 200 107785 http-bio-8080-exec-7 137
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:22:57:01 -0500] "GET /javax.faces.resource/theme.css.xhtml?ln=primefaces-aristo HTTP/1.1" 200 24248 http-bio-8080-exec-2 239
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:22:57:01 -0500] "GET /javax.faces.resource/components.js.xhtml;jsessionid=F38EAEA4A7FD681F817149F8B88C6BED?ln=primefaces&v=6.0 HTTP/1.1" 200 357791 http-bio-8080-exec-4 197
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:22:57:01 -0500] "GET /javax.faces.resource/jquery/jquery-plugins.js.xhtml;jsessionid=F38EAEA4A7FD681F817149F8B88C6BED?ln=primefaces&v=6.0 HTTP/1.1" 200 245797 http-bio-8080-exec-6 198
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:22:57:01 -0500] "GET /javax.faces.resource/components.css.xhtml;jsessionid=F38EAEA4A7FD681F817149F8B88C6BED?ln=primefaces&v=6.0 HTTP/1.1" 200 75326 http-bio-8080-exec-3 299
+0:0:0:0:0:0:0:1 - - [23/Sep/2020:22:57:02 -0500] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-4 25
