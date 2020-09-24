@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Lab 5 (Part IV)</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </h:head>
+
+    <h:body>
+        <div align="center">
+
+            <!-- Cover page -->
+
+            <h3>Escuela Colombiana de Ingeniería Julio Garavito</h3>
+            <h3>Ciclos de Vida del Desarrollo de Software (CVDS) - Grupo 1</h3>
+            <h3>Lab 5 (Part IV) - Web App JSF/PrimeFaces</h3>
+            <h3>
+                Web App with
+                <a href="https://www.oracle.com/java/technologies/javaserverfaces.html">JSF</a>
+                /
+                <a href="https://www.primefaces.org/">PrimeFaces</a>
+            </h3>
+            <br/>
+
+            <!-- Part IV -->
+
+            <h:form>
+                <h4>Using JSF outcome</h4>
+                <p:commandButton action = "calculator" value = "Usar calculadora"/>
+            </h:form>
+            <br/>
+            <h:form>
+                <h4>Using Managed Bean</h4>
+                <p:commandButton action = "#{navigationController.viewCalculator}"
+                                 value = "Usar calculadora"/>
+            </h:form>
+            <br/>
+
+            <!-- Part II and III -->
+
+            <h4>Check a task (HTML validation)</h4>
+            <form action="/todo?[[$id$]]" method="get">
+                <label for="withHTML">Type a id number:</label>
+                <input type="number" id="withHTML" name="id" min="1" value="1"/>
+                <input type="submit" value="Submit"/>
+            </form>
+            <br/>
+            <h4>Check a task (JavaScript validation)</h4>
+            <form name="jSValidation" action="/todo?[[$id$]]" method="post" onsubmit="return inputIsNumber()">
+                <label for="withJS">Type a id number:</label>
+                <input type="text" id="withJS" name="id" value="1"/>
+                <input type="submit" value="Submit"/>
+            </form>
+            <script>
+                function inputIsNumber() {
+                    var input, message;
+
+                    input = document.getElementById("withJS").value;
+
+                    if (input != parseInt(input)) {
+                        message = "Ingresa un número entero mayor que 0";
+                        alert(message);
+                        return false;
+                    }
+                }
+            </script>
+            <br/>
+            <h4>Do you want the server to greet you?</h4>
+            <form action="/helloServlet?[[$name$]]" method="get">
+                <label for="name">Type your name:</label>
+                <input type="text" id="name" name="name" value="Daniel"/>
+                <input type="submit" value="Submit"/>
+            </form>
+            <br/>
+        </div>
+    </h:body>
+</html>
