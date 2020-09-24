@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+    <h:head>
+        <title>Lab 5 (Part IV)</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </h:head>
+
+    <h:body>
+        <script>
+            function validInputField() {
+                var input = document.getElementById("inputField").value;
+                var message;
+
+                if (input == "") {
+                    message = "Ingresa al menos un número";
+                    alert(message);
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
+
+        <div align="center">
+            <h:form id="calculator_form" onsubmit="return validInputField()">
+                <h3>Calculadora de Estadísticas Descriptivas</h3>
+                <table style="width:80%">
+                    <tr>
+                        <td>
+                            <label>Ingresa los números (sepáralos con ;)</label>
+                        </td>
+                        <td>
+                            <p:inputText  id="inputField" value="#{calculatorBean.inputField}"
+                                          pt:placeholder="Ejemplo:   2; 3.5; 4.8; 5.1"/>
+                        </td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Moda</label>
+                        </td>
+                        <td>
+                            <p:outputLabel value="#{calculatorBean.modes}"/>
+                        </td>
+                        <td>
+                            <p:commandButton update="calculator_form" actionListener="#{calculatorBean.viewModes()}"
+                                             value="Calcular"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Media</label>
+                        </td>
+                        <td>
+                            <p:outputLabel value="#{calculatorBean.mean}"/>
+                        </td>
+                        <td>
+                            <p:commandButton update="calculator_form" actionListener="#{calculatorBean.viewMean()}"
+                                             value="Calcular"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Desviación Estándar</label>
+                        </td>
+                        <td>
+                            <p:outputLabel value="#{calculatorBean.standardDeviation}"/>
+                        </td>
+                        <td>
+                            <p:commandButton update="calculator_form" actionListener="#{calculatorBean.viewStandardDeviation()}"
+                                             value="Calcular"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Varianza</label>
+                        </td>
+                        <td>
+                            <p:outputLabel value="#{calculatorBean.variance}"/>
+                        </td>
+                        <td>
+                            <p:commandButton update="calculator_form" actionListener="#{calculatorBean.viewVariance()}"
+                                             value="Calcular"/>
+                        </td>
+                    </tr>
+                </table>
+                <br/><br/>
+                <p:dataTable var="list" value="#{calculatorBean.record}" style="width:80%">
+                    <p:column headerText="Historial">
+                        <h:outputText value="#{list}" />
+                    </p:column>
+                    //more columns
+                </p:dataTable>
+                <br/>
+                <p:commandButton update="calculator_form" actionListener="#{calculatorBean.restart()}"
+                                 value="Reiniciar"/>
+            </h:form>
+            <br/><br/>
+            <p:commandButton action = "#{navigationController.viewIndex()}"
+                             value = "Inicio"/>
+        </div>
+    </h:body>
+</html>
