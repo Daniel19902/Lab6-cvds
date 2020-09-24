@@ -1,5 +1,7 @@
 # :hammer_and_wrench: Laboratorio 5 - MVC PrimeFaces Introduction
 
+[![CircleCI](https://circleci.com/gh/Daniel19902/Lab6-cvds.svg?style=svg)](https://app.circleci.com/pipelines/github/Daniel19902/Lab6-cvds)
+
 ## I. Jugando a ser un cliente HTTP
 
 1. Abra una terminal Linux o consola de comandos Windows.
